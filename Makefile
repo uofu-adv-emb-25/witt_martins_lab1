@@ -3,7 +3,8 @@ AS=$(PICO_TOOLCHAIN_PATH)/bin/arm-none-eabi-as
 CPP=$(PICO_TOOLCHAIN_PATH)/bin/arm-none-eabi-cpp
 LD=$(PICO_TOOLCHAIN_PATH)/bin/arm-none-eabi-ld
 
-
+hello.txt:
+	echo "hello world!" > hello.txt
 
 SRC = main.c second.c
 OBJS=$(patsubst %.c,%.o,$(SRC))
